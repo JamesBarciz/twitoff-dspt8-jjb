@@ -1,0 +1,44 @@
+### What is Front-End, Back-End, Database and what tasks are appropriate for which?
+
+- Front-End: User-facing, User-interaction
+    - Webpage, mobile application
+    - JS, HTML, CSS
+
+- Internet/LAN
+
+- Back-End
+    - Web Server (Application Logic)
+        - PHP, Python, Ruby, Node.JS, Java
+    
+        - Talks to:
+            - File System
+                - HTML, CSS, Images, Videos, Audio Files
+
+            - Database - Not suitable for storing files ^^^
+                - MySQL, PostgreSQL, Oracle, MongoDB, CouchBase
+
+
+User --> FE(Collects Data) Request to --> Internet --> BE(File System) --> Internet --> FE(Displays Results) --> User
+
+
+### Flask
+
+- Picnic CSS (library)
+
+- Flask (microframework) - Not limited, provides minimal functionality to get you started (small application)
+    - Django better for larger applications
+    - `export FLASK_APP=<filepath>`
+        - `export FLASK_APP=app_directory/app.py`
+        - `export FLASK_APP=app_directory:APP` (APP referring to the __init__.py file)
+    - `export FLASK_ENV=development`
+
+- PYTHON STUFF
+    - __main__ > Returns file name when imported and ran (see test_file and test_file2)
+
+
+
+### OTHER STUFF
+
+- Git
+    - remove a file from Git
+        - `git rm <filename>`

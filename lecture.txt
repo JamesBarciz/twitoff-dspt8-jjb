@@ -32,6 +32,23 @@ User --> FE(Collects Data) Request to --> Internet --> BE(File System) --> Inter
         - `export FLASK_APP=app_directory:APP` (APP referring to the __init__.py file)
     - `export FLASK_ENV=development`
 
+- Flask Shell (REPL for Flask)
+    - Must specify the package name in the import statement
+        - `from twitoff.models import DB, User`
+    - DB Session vv
+        >>> from twitoff.models import DB, User, Tweet
+        >>> DB.drop_all()
+        >>> DB.create_all()
+        >>> user1 = User(name='billgates')
+        >>> user2 = User(name='elonmusk')
+        >>> tweet1 = Tweet(tweet='What if Mars was like Earth?')
+        >>> tweet2 = Tweet(tweet='coding is not difficult')
+        >>> user1.tweets.append(tweet1)  <-- Back Reference
+        >>> user1.tweets.append(tweet2)  <-- Back Reference
+        >>> DB.session.add(user1)
+        >>> DB.session.add(user2)
+        >>> DB.session.commit()
+
 - PYTHON STUFF
     - __main__ > Returns file name when imported and ran (see test_file and test_file2)
 
@@ -42,3 +59,6 @@ User --> FE(Collects Data) Request to --> Internet --> BE(File System) --> Inter
 - Git
     - remove a file from Git
         - `git rm <filename>`
+
+- SQLAlchemy - ORM (Object Relational Mapper)
+    - Library that writes SQL code for you

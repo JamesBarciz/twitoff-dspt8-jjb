@@ -1,0 +1,21 @@
+CRUD - Acronym that pretty much any application needs to be able to perform with a database
+    Create
+    Read
+    Update
+    Delete
+
+REST - One communication standard that allows you to perform CRUD
+    - Make requests:
+        - POST - Adding a User/Tweet `@app.route('/route', methods=['POST'])
+            - has a 'body' in JSON which is a Key:Value data structure
+            - HTTP Response Code 200-99 = Successful
+                100-99 = informational Response
+                300-99 = Redirect
+                400-99 = Client Error
+                500-99 = Server Error
+        - GET (Default in flask magic commands `@app.route('/hello')`)
+        - PUT
+        - DELETE
+    - Other standards: SOAP (outdated)
+
+Requests package - Default for HTTPS requests in Python

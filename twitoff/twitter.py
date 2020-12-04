@@ -10,6 +10,8 @@ TWITTER = tweepy.API(TWITTER_AUTH)
 # >>> from twitoff.twitter import *
 # >>> from twitoff.models import *
 # >>> import spacy
+# >>> DB.drop_all()
+# >>> DB.create_all()
 # >>> username = 'elonmusk'
 # >>> twitter_user = TWITTER.get_user(username)
 # >>> tweets = twitter_user.timeline(count=200, exclude_replies=True, exclude_rts=True)
@@ -20,7 +22,5 @@ TWITTER = tweepy.API(TWITTER_AUTH)
 # ...   embedding = list(nlp(text).vector)
 # ...   db_tweet = Tweet(id=tweet.id, tweet=text, embedding=embedding)
 # ...   db_user.tweets.append(db_tweet)
-# >>> DB.drop_all()
-# >>> DB.create_all()
 # >>> DB.session.add(db_user)
 # >>> DB.session.commit()

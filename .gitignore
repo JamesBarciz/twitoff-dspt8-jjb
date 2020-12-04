@@ -1,4 +1,5 @@
 .gitignore
+.env
 
 hello.py
 test_file.py

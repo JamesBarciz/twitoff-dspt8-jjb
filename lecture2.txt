@@ -19,3 +19,15 @@ REST - One communication standard that allows you to perform CRUD
     - Other standards: SOAP (outdated)
 
 Requests package - Default for HTTPS requests in Python
+
+Environment variables
+    - `pipenv install python-decouple`  python-dotenv works too
+    - Resolve library issues
+        - where/which python
+        - `rm -rf <directory_name>`
+        - `rm Pipfile*`
+
+Other packages
+    - `pipenv install spacy tweepy`
+
+TWEEPY - used to interact with Twitter API

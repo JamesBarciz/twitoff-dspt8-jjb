@@ -9,6 +9,9 @@ from .predict import predict_user
 from .twitter import add_or_update_user, update_all_users
 
 
+# Add config vars on command line with `heroku config:set KEY='VALUE'`
+
+
 def create_app():
 	app = Flask(__name__)
 	app.config['SQLALCHEMY_DATABASE_URI'] = getenv('DATABASE_URI')

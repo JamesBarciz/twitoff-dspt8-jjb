@@ -1,0 +1,16 @@
+<!-- Template Inheritance
+Everything in block content will replace that of base.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<div id="user-info">
+	<h2>User: {{ title }}</h2>
+	<p>{{ message }}</p>
+
+	{% for tweet in tweets %}
+	<li>{{tweet.id}} :: {{ tweet.text }}</li>
+	<br>
+	{% endfor %}
+</div>
+{% endblock %}

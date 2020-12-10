@@ -12,6 +12,7 @@ python-decouple = "*"
 spacy = "*"
 tweepy = "*"
 numpy = "==1.19.3"
+scikit-learn = "*"
 
 [requires]
 python_version = "3.7"

@@ -42,8 +42,6 @@ def add_or_update_user(name):
 		if tweets:
 			db_user.newest_tweet_id = tweets[0].id
 
-		nlp = spacy.load("en_core_web_md")
-
 		for tweet in tweets:
 			embedding = list(nlp(tweet.text).vector)
 			db_tweet = Tweet(id=tweet.id, text=tweet.text, embedding=embedding)

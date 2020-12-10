@@ -3,6 +3,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import spacy
 
 from .models import User
+from .twitter import vectorize_tweet
 
 
 def predict_user(user1_name, user2_name, tweet_text):
@@ -16,9 +17,8 @@ def predict_user(user1_name, user2_name, tweet_text):
     labels = np.concatenate([np.ones(len(user1.tweets)), np.zeros(len(user2.tweets))])  # y
 
     knnc = KNeighborsClassifier(weights='distance', metric='cosine').fit(embeddings, labels)
-
-    nlp = spacy.load('en_core_web_md')
-    tweet_embedding = list(nlp(tweet_text).vector)
+    
+    tweet_embedding = vectorize_tweet(tweet_text)
     
     pred = knnc.predict(np.array(tweet_embedding).reshape(1,-1))
 
